@@ -11,7 +11,8 @@
     --color-primary: #212121;
     --color-secondary: #757575;
     --color-accent: #188CE8;
-    --card-set-gap: 30px; 
+    --card-set-gap: 30px;
+    --color-links: #AFB1B8;
 }
 
 html {
@@ -56,7 +57,7 @@ a {
     text-decoration: none;
 }
 
-.section{
+.section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -99,7 +100,7 @@ img {
 }
 
 /*Навігація*/
-.nav{
+.nav {
     display: flex;
 }
 
@@ -132,6 +133,7 @@ img {
 .site-nav li:last-child {
     margin-right: 0;
 }
+
 /*Контакти*/
 
 .contact {
@@ -143,6 +145,7 @@ img {
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
+    align-items: center;
 }
 
 .contact:hover,
@@ -164,24 +167,48 @@ img {
     margin-right: 0;
 }
 
-.page-header > .container {
+.page-header>.container {
     display: flex;
 }
+
 header {
     border-bottom: 1px solid #ECECEC;
 }
 
+.icon-envelope{
+width: 16px;
+height: 12px;
+margin-right: 10px;
+fill: var(--color-secondary);
+}
+.icon-envelope:hover{
+    fill: var(--color-brand);
+}
+
+.icon-smartphone{
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: var(--color-secondary);
+    }
+
+.icon-smartphone:hover {
+    fill: var(--color-brand);
+}
+
 /*секція Hero*/
-.section-hero{
+.section-hero {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--background-color-hero);
     text-align: center;
-
+    max-width: 1600px;
+    background-image:linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url('../images/hero.jpg');
     
 }
-
-
 
 .hero-title {
     color: var(--background-color-first);
@@ -191,7 +218,7 @@ header {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     max-width: 696px;
-    margin:  0 252px 30px 252px;
+    margin: 0 252px 30px 252px;
 }
 
 /*кнопкa*/
@@ -218,19 +245,19 @@ header {
 }
 
 /*Особливості features*/
-.features{
-display: flex;
-padding-bottom: 0;
+.features {
+    display: flex;
+    padding-bottom: 0;
 
 
 }
 
-.features > .feature-list{
+.features>.feature-list {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
 }
 
-ul.features{
+ul.features {
     margin-left: calc(-1 * var(--card-set-gap));
 }
 
@@ -265,42 +292,37 @@ ul.features{
     text-align: center;
     letter-spacing: 0.03em;
 }
-.fuature-box{
+
+.fuature-box {
     padding: 0;
     margin: 0;
     display: flex;
     margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.fuature-box > .feature-card {
+.fuature-box>.feature-card {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
 }
 
-.feature{
+.feature {
     width: 100%;
 }
 
 
 /*секція section-team Наша команда*/
-.team-list{
+.team-list {
     padding: 0;
     margin: 0;
     display: flex;
-    margin-left:calc(-1 *var(--card-set-gap));
+    margin-left: calc(-1 *var(--card-set-gap));
     margin-top: calc(-1 *var(--card-set-gap));
-    
-    
 }
 
-.team-list > .team-card{
+.team-list>.team-card {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
- 
-    
-    
-    
 }
 
 .section.team {
@@ -340,6 +362,41 @@ ul.features{
     letter-spacing: 0.03em;
     margin-top: 0;
     margin-bottom: 30px;
+}
+
+.social-links{
+    display: flex;
+    align-items: center;
+    margin: 0 32px 30px 32px;
+    padding: 0;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+
+    
+
+ 
+}
+.link-instagram{
+    width: 20px;
+    height: 20px;
+    fill: var(--color-links);
+    
+}
+.link-twitter{
+    width: 20px;
+    height: 20px;
+    fill: var(--color-links);
+}
+
+.link-facebook{
+    width: 20px;
+    height: 20px;
+    fill: var(--color-links);
+}
+.link-linkedin{
+    width: 20px;
+    height: 20px;
+    fill: var(--color-links);
 }
 
 /*footer*/
@@ -488,7 +545,7 @@ ul.features{
     margin-top: calc(-1 * var(--card-set-gap));
 }
 
-.list-project > .flex-element {
+.list-project>.flex-element {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
@@ -500,9 +557,11 @@ ul.features{
     border-bottom: 1px solid #EEEEEE;
     padding: 20px 24px;
 }
-.img-project{
+
+.img-project {
     width: 100%;
 }
+
 .list-project-subtitle {
     color: var(--color-primary);
     font-weight: 700;
@@ -535,5 +594,3 @@ ul.features{
 .link-project {
     text-decoration: none;
 }
-
-
